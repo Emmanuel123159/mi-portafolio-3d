@@ -2,7 +2,7 @@
 
 Interactive 3D portfolio featuring a custom programmer desk setup modeled in Blender and integrated with Three.js.
 
-🔗 **Live Demo:** [https://TU-USUARIO.github.io/mi-portafolio-3d/](https://TU-USUARIO.github.io/mi-portafolio-3d/)
+🔗 **Live Demo:** [https://Emmanuel123159.github.io/mi-portafolio-3d/](https://Emmanuel123159.github.io/mi-portafolio-3d/)
 
 ## 🔧 Technologies
 
@@ -38,7 +38,8 @@ mi-portafolio-3d/
 1. Clone the repo: `git clone https://github.com/Emmanuel123159/mi-portafolio-3d.git`  
 2. Run a local server (Live Server, `npx http-server`, or Python `http.server`)  
 3. Open `index.html` in your browser  
-
+link the paga:
+http://127.0.0.1:5500/index.html
 ## 📅 Commit History (4 different days)
 
 - Day 1 – `docs: initial README and project scaffold`  
