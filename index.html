@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Emmanuel Dominguez | 3D Portfolio</title>
+    <title>Emmanuel Dominguez | Portafolio 3D</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap"
         rel="stylesheet">
@@ -34,7 +34,6 @@
             min-height: 100vh;
         }
 
-        /* Sidebar */
         .sidebar {
             width: 280px;
             background: rgba(15, 23, 42, 0.9);
@@ -125,7 +124,6 @@
             transform: scale(0.98);
         }
 
-        /* Main content */
         .main-content {
             flex: 1;
             padding: 2rem;
@@ -147,12 +145,14 @@
             overflow: hidden;
             background: #00000020;
             box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
 
         .three-container {
             width: 100%;
             height: 450px;
             display: block;
+            position: relative;
         }
 
         .canvas-instruction {
@@ -225,7 +225,7 @@
             color: #6C63FF;
         }
 
-        .fake-rive-btn {
+        .demo-btn {
             display: inline-block;
             background: #6C63FF;
             padding: 0.2rem 0.8rem;
@@ -283,6 +283,20 @@
             font-size: 0.75rem;
             margin-top: 2rem;
         }
+
+        .status-badge {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-family: monospace;
+            z-index: 10;
+            pointer-events: none;
+            backdrop-filter: blur(4px);
+        }
     </style>
 </head>
 
@@ -291,88 +305,108 @@
         <aside class="sidebar">
             <div class="logo-area">
                 <div class="avatar-placeholder">
-                    <img src="https://ui-avatars.com/api/?background=6C63FF&color=fff&rounded=true&size=100&name=Emmanuel+Dominguez"
-                        alt="Emmanuel Dominguez">
+                    <img src="./assets/img/Mi_foto.jpeg" alt="Emmanuel Dominguez">
                 </div>
                 <h2>Emmanuel Dominguez</h2>
-                <p class="tagline">3D & Web Developer · Creative Technologist</p>
+                <p class="tagline">Desarrollador 3D & Web · Creador de experiencias</p>
             </div>
             <nav class="nav-links">
-                <a href="#about"><i class="fas fa-user"></i> About</a>
-                <a href="#skills"><i class="fas fa-code"></i> Skills</a>
-                <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#about"><i class="fas fa-user"></i> Sobre mí</a>
+                <a href="#skills"><i class="fas fa-code"></i> Habilidades</a>
+                <a href="#projects"><i class="fas fa-project-diagram"></i> Proyectos</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contacto</a>
             </nav>
             <div class="theme-toggle-wrapper">
-                <button id="darkModeToggle"><i class="fas fa-moon"></i> Dark/Light</button>
-                <button id="colorShiftBtn"><i class="fas fa-palette"></i> Color Shift Setup</button>
+                <button id="darkModeToggle"><i class="fas fa-moon"></i> Claro/Oscuro</button>
+                <button id="colorShiftBtn"><i class="fas fa-palette"></i> Cambiar color luces</button>
             </div>
         </aside>
 
         <main class="main-content">
             <header class="hero">
-                <h1>3D Programmer <span>Setup</span></h1>
-                <p>Interactive desk scene · Modeled in Blender · Powered by Three.js</p>
+                <h1>Setup de Programador <span>3D</span></h1>
+                <p>Escena interactiva · Modelada en Blender · Potenciada por Three.js</p>
             </header>
 
             <section class="canvas-section">
                 <div id="canvas-container" class="three-container"></div>
                 <div class="canvas-instruction">
-                    <span><i class="fas fa-mouse-pointer"></i> Drag to rotate · Right click + drag to pan · Scroll to
-                        zoom</span>
+                    <span><i class="fas fa-mouse-pointer"></i> Arrastra para rotar · Click derecho + arrastrar para
+                        mover · Desplaza para zoom</span>
                 </div>
             </section>
 
             <section id="about" class="info-card">
-                <h2><i class="fas fa-smile-wink"></i> About Me</h2>
-                <p>I'm Emmanuel Dominguez, a passionate 3D artist and front-end developer. This portfolio represents my
-                    ability to model a complete programmer desk setup in Blender, export it to GLB, and integrate it
-                    into a responsive website with Three.js. I focus on creating immersive digital experiences that
-                    blend design, interactivity, and code.</p>
+                <h2><i class="fas fa-smile-wink"></i> Sobre mí</h2>
+                <p>Soy Emmanuel Dominguez, un apasionado artista 3D y desarrollador front-end. Este portafolio
+                    representa mi capacidad para modelar un escritorio de programador completo en Blender, exportarlo a
+                    GLTF e integrarlo en un sitio web responsivo con Three.js. Me enfoco en crear experiencias digitales
+                    inmersivas que combinan diseño, interactividad y código.</p>
             </section>
 
             <section id="skills" class="info-card">
-                <h2><i class="fas fa-cogs"></i> Skills</h2>
+                <h2><i class="fas fa-cogs"></i> Habilidades técnicas</h2>
                 <div class="skills-grid">
                     <span>Blender 3D</span><span>Three.js</span><span>GLTF/GLB</span>
-                    <span>JavaScript</span><span>HTML5/CSS3</span><span>Responsive UI</span>
+                    <span>JavaScript</span><span>HTML5/CSS3</span><span>Diseño responsivo</span>
                     <span>WebGL</span><span>Git & GitHub</span><span>Rive</span>
                 </div>
             </section>
 
             <section id="projects" class="info-card">
-                <h2><i class="fas fa-laptop-code"></i> Projects</h2>
+                <h2><i class="fas fa-laptop-code"></i> Proyectos destacados</h2>
                 <div class="projects-grid">
                     <div class="project-item">
                         <i class="fas fa-cube fa-2x"></i>
-                        <h3>3D Desk Setup</h3>
-                        <p>Custom Blender model: monitor, keyboard, mouse, laptop, plant, and extra creative object.
-                            Exported as GLB and integrated with Three.js (OrbitControls, dynamic lighting).</p>
+                        <h3>Escritorio 3D</h3>
+                        <p>Modelado personalizado en Blender: monitor, teclado, mouse, laptop, planta y objeto extra.
+                            Exportado a GLTF e integrado con Three.js.</p>
                     </div>
                     <div class="project-item">
                         <i class="fas fa-play-circle fa-2x"></i>
-                        <h3>Rive Animation</h3>
-                        <p>Interactive character animation built with Rive. Demonstrates real-time vector motion and
-                            event-driven interactivity.</p>
-                        <div class="fake-rive-btn" id="riveDemoBtn">▶ Try Rive Demo</div>
+                        <h3>Animación Rive</h3>
+                        <p>Personaje interactivo animado con Rive. Demuestra movimiento vectorial en tiempo real e
+                            interactividad.</p>
+                        <div class="demo-btn" id="riveDemoBtn">▶ Probar demo Rive</div>
                     </div>
                     <div class="project-item">
                         <i class="fas fa-palette fa-2x"></i>
-                        <h3>Color Shift Feature</h3>
-                        <p>JavaScript interaction that cycles colors on the 3D desk objects (via material toggles) and
-                            changes accent lights in real time.</p>
+                        <h3>Cambio de color</h3>
+                        <p>Interacción en JavaScript que cambia los colores de las luces de la escena 3D y el fondo en
+                            tiempo real.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="interests" class="info-card">
+                <h2><i class="fas fa-heart"></i> Gustos e Intereses</h2>
+                <div class="projects-grid">
+                    <div class="project-item" style="text-align: center;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Club_Am%C3%A9rica_logo.svg" alt="Club América" style="height: 80px; margin-bottom: 1rem;">
+                        <h3>Club América</h3>
+                        <p>Mi pasión en el fútbol mexicano.</p>
+                    </div>
+                    <div class="project-item" style="text-align: center;">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="FC Barcelona" style="height: 80px; margin-bottom: 1rem;">
+                        <h3>FC Barcelona</h3>
+                        <p>Mi equipo favorito de Europa.</p>
+                    </div>
+                    <div class="project-item" style="text-align: center;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Michael_Jackson_in_1988.jpg" alt="Michael Jackson" style="height: 80px; width: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
+                        <h3>Michael Jackson</h3>
+                        <p>El Rey del Pop, mi cantante favorito.</p>
                     </div>
                 </div>
             </section>
 
             <section id="contact" class="info-card">
-                <h2><i class="fas fa-paper-plane"></i> Contact & Socials</h2>
+                <h2><i class="fas fa-paper-plane"></i> Contacto y redes</h2>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-github"></i> github/emmanuel3d</a>
                     <a href="#"><i class="fab fa-linkedin"></i> linkedin/in/emmanueldominguez</a>
                     <a href="#"><i class="fas fa-envelope"></i> emmanuel.d@devportfolio.com</a>
                 </div>
-                <footer>© 2026 Emmanuel Dominguez — Portfolio built with Three.js & Blender</footer>
+                <footer>© 2026 Emmanuel Dominguez — Portafolio construido con Three.js & Blender</footer>
             </section>
         </main>
     </div>
@@ -391,8 +425,14 @@
         import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
         import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-        // Setup scene, camera, renderer
         const container = document.getElementById('canvas-container');
+        while (container.firstChild) container.removeChild(container.firstChild);
+
+        const statusDiv = document.createElement('div');
+        statusDiv.className = 'status-badge';
+        statusDiv.textContent = '⏳ Inicializando...';
+        container.appendChild(statusDiv);
+
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0x050b1a);
         scene.fog = new THREE.FogExp2(0x050b1a, 0.008);
@@ -404,10 +444,8 @@
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(container.clientWidth, container.clientHeight);
         renderer.shadowMap.enabled = true;
-        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
         container.appendChild(renderer.domElement);
 
-        // Controls
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
         controls.dampingFactor = 0.05;
@@ -416,93 +454,112 @@
         controls.panSpeed = 0.8;
         controls.target.set(0, 0.6, 0);
 
-        // Lighting (enhanced for GLB models)
+        // Luces
         const ambientLight = new THREE.AmbientLight(0x404060, 0.6);
         scene.add(ambientLight);
-
         const mainLight = new THREE.DirectionalLight(0xffffff, 1.2);
         mainLight.position.set(4, 5, 3);
         mainLight.castShadow = true;
-        mainLight.receiveShadow = true;
-        mainLight.shadow.mapSize.width = 1024;
-        mainLight.shadow.mapSize.height = 1024;
         scene.add(mainLight);
-
         const fillLight = new THREE.PointLight(0x556688, 0.5);
         fillLight.position.set(1, 2, 2);
         scene.add(fillLight);
-
         const backRim = new THREE.PointLight(0xffaa66, 0.5);
         backRim.position.set(-1.5, 1.8, -2.2);
         scene.add(backRim);
-
         const coolFill = new THREE.PointLight(0x6688ff, 0.4);
         coolFill.position.set(2.5, 1.2, 1);
         scene.add(coolFill);
 
-        // Helper grid
         const gridHelper = new THREE.GridHelper(12, 20, 0x88aaff, 0x335588);
         gridHelper.position.y = -0.45;
         gridHelper.material.transparent = true;
         gridHelper.material.opacity = 0.25;
         scene.add(gridHelper);
 
-        // ----- LOAD YOUR BLENDER MODEL (Mini_setup.glb) -----
-        let deskModel = null;
-        const loader = new GLTFLoader();
-        loader.load('assets/3d/Mini_setup.glb',
-            (gltf) => {
-                deskModel = gltf.scene;
-                // Adjust position and scale if needed (tweak these values)
-                deskModel.position.set(0, -0.2, 0);
-                deskModel.scale.set(1, 1, 1);
-                // Enable shadows
-                deskModel.traverse((child) => {
-                    if (child.isMesh) {
-                        child.castShadow = true;
-                        child.receiveShadow = true;
-                    }
-                });
-                scene.add(deskModel);
-                console.log('✅ Mini_setup.glb loaded successfully');
-            },
-            (xhr) => {
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-            },
-            (error) => {
-                console.error('❌ Error loading GLB model:', error);
-                // Fallback message on canvas
-                const msg = document.createElement('div');
-                msg.textContent = '⚠️ Could not load 3D model. Make sure assets/3d/Mini_setup.glb exists.';
-                msg.style.color = '#ff8888';
-                msg.style.padding = '1rem';
-                msg.style.textAlign = 'center';
-                container.appendChild(msg);
-            }
-        );
+        // Fallback: cubo con textura de ayuda
+        const fallbackGroup = new THREE.Group();
+        const boxMat = new THREE.MeshStandardMaterial({ color: 0xff8800, emissive: 0x442200 });
+        const fallbackCube = new THREE.Mesh(new THREE.BoxGeometry(1.2, 1.2, 1.2), boxMat);
+        fallbackCube.position.set(0, 0.5, 0);
+        fallbackCube.castShadow = true;
+        fallbackGroup.add(fallbackCube);
+        let fallbackActive = false;
 
-        // ----- INTERACTIVITY: Color Shift (changes light colors and adds a tint effect) -----
+        // Intento de carga del modelo GLTF
+        const loader = new GLTFLoader();
+        // PRUEBA CON RUTAS: Cargando tu modelo local exportado
+        const rutasPosibles = [
+            './assets/3d/Mini_setup.gltf'
+        ];
+
+        let intentoActual = 0;
+
+        function intentarCargar() {
+            if (intentoActual >= rutasPosibles.length) {
+                statusDiv.textContent = '❌ No se encontró el modelo en ninguna ruta. Revisa la carpeta assets/3d/';
+                statusDiv.style.backgroundColor = 'rgba(255,0,0,0.8)';
+                activarFallback();
+                return;
+            }
+            const ruta = rutasPosibles[intentoActual];
+            statusDiv.textContent = `🔍 Intentando cargar: ${ruta}`;
+
+            // Cargamos directamente con GLTFLoader, sin fetch previo, ya que algunos servidores locales bloquean peticiones HEAD
+            loader.load(ruta,
+                (gltf) => {
+                    const model = gltf.scene;
+                    model.position.set(0, -0.2, 0);
+                    model.scale.set(1, 1, 1);
+                    model.traverse(child => { if (child.isMesh) { child.castShadow = true; child.receiveShadow = true; } });
+                    scene.add(model);
+                    statusDiv.textContent = '✅ Modelo 3D cargado correctamente';
+                    statusDiv.style.backgroundColor = 'rgba(0,128,0,0.8)';
+                    setTimeout(() => statusDiv.style.opacity = '0.5', 3000);
+                    if (fallbackActive) scene.remove(fallbackGroup);
+                },
+                (xhr) => {
+                    if (xhr.lengthComputable) {
+                        const percent = Math.floor(xhr.loaded / xhr.total * 100);
+                        statusDiv.textContent = `⏳ Cargando: ${percent}%`;
+                    }
+                },
+                (error) => {
+                    console.warn(`Falló cargar en la ruta ${ruta}. Intentando la siguiente...`, error);
+                    intentoActual++;
+                    intentarCargar();
+                }
+            );
+        }
+
+        function activarFallback() {
+            if (fallbackActive) return;
+            fallbackActive = true;
+            scene.add(fallbackGroup);
+            statusDiv.textContent += ' | Mostrando respaldo (cubo naranja) - El modelo 3D no pudo cargarse. Verifica que los archivos .gltf y .bin estén en assets/3d/';
+            console.warn('Modelo no cargado, mostrando fallback');
+        }
+
+        intentarCargar();
+
+        // Interactividad: cambio de colores de luces
         const colorShiftBtn = document.getElementById('colorShiftBtn');
         let colorCycle = 0;
         const lightColors = [0xff3366, 0x33ff66, 0x33aaff, 0xffaa33, 0xaa33ff];
         const bgColors = [0x050b1a, 0x1a0b1a, 0x0b1a1a, 0x1a1a0b, 0x1a0b2a];
-
         colorShiftBtn.addEventListener('click', () => {
             colorCycle = (colorCycle + 1) % lightColors.length;
-            // Change fill light color
             fillLight.color.setHex(lightColors[colorCycle]);
             coolFill.color.setHex(lightColors[(colorCycle + 2) % lightColors.length]);
-            // Subtle background tint change (only if dark mode)
             if (!document.body.classList.contains('light-theme')) {
                 scene.background.setHex(bgColors[colorCycle]);
                 scene.fog.color.setHex(bgColors[colorCycle]);
             }
-            // Also pulse the rim light intensity for fun
             backRim.intensity = 0.7 + Math.random() * 0.5;
-            setTimeout(() => { backRim.intensity = 0.5; }, 300);
+            setTimeout(() => backRim.intensity = 0.5, 300);
         });
 
-        // ----- DARK MODE TOGGLE (UI + scene ambiance) -----
+        // Modo oscuro/claro
         const darkToggle = document.getElementById('darkModeToggle');
         darkToggle.addEventListener('click', () => {
             document.body.classList.toggle('light-theme');
@@ -522,18 +579,17 @@
             }
         });
 
-        // ----- PARTICLES SYSTEM (extra visual flair) -----
+        // Partículas
         const particleCount = 600;
         const particleGeo = new THREE.BufferGeometry();
-        const particlePositions = new Float32Array(particleCount * 3);
+        const positions = new Float32Array(particleCount * 3);
         for (let i = 0; i < particleCount; i++) {
-            particlePositions[i * 3] = (Math.random() - 0.5) * 12;
-            particlePositions[i * 3 + 1] = Math.random() * 4;
-            particlePositions[i * 3 + 2] = (Math.random() - 0.5) * 8 - 2;
+            positions[i * 3] = (Math.random() - 0.5) * 12;
+            positions[i * 3 + 1] = Math.random() * 4;
+            positions[i * 3 + 2] = (Math.random() - 0.5) * 8 - 2;
         }
-        particleGeo.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
-        const particleMat = new THREE.PointsMaterial({ color: 0x88aaff, size: 0.04, transparent: true, opacity: 0.6 });
-        const particles = new THREE.Points(particleGeo, particleMat);
+        particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        const particles = new THREE.Points(particleGeo, new THREE.PointsMaterial({ color: 0x88aaff, size: 0.04, transparent: true }));
         scene.add(particles);
 
         function animateParticles() {
@@ -543,31 +599,25 @@
         }
         animateParticles();
 
-        // Rive demo alert (fake interaction for requirement)
         document.getElementById('riveDemoBtn').addEventListener('click', () => {
-            alert('🎨 Rive animation demo: Interactive character with motion. Full Rive file can be integrated separately.');
+            alert('🎨 Demo de animación Rive: personaje interactivo. Se puede integrar el archivo Rive real.');
         });
 
-        // Handle window resize
-        window.addEventListener('resize', onWindowResize, false);
-        function onWindowResize() {
+        window.addEventListener('resize', () => {
             const width = container.clientWidth;
             const height = container.clientHeight;
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
             renderer.setSize(width, height);
-        }
+        });
 
-        // Animation loop
         function animate() {
             requestAnimationFrame(animate);
             controls.update();
             renderer.render(scene, camera);
         }
         animate();
-
-        // Initial resize call
-        setTimeout(() => onWindowResize(), 100);
+        setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
     </script>
 </body>
 
